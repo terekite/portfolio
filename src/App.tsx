@@ -1,5 +1,6 @@
 import { projects } from "./projects";
 import ProjectCard from "./components/ProjectCard";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           ))}
         </div>
       </section>
+      <Footer />
     </main>
   )
 }
