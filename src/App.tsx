@@ -1,4 +1,3 @@
-import './App.css'
 import { projects } from "./projects";
 import ProjectCard from "./components/ProjectCard";
 
