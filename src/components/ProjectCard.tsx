@@ -14,11 +14,13 @@ function ProjectCard({ project }: ProjectCardProps) {
           : undefined
       }
     >
-      <img
-        src={project.image ?? "/project-card-default-image.webp"}
-        alt={project.title}
-        className="project-card-image"
-      />
+      <div className="project-card-banner">
+        <img
+          src={project.image ?? "/project-card-default-image.webp"}
+          alt={project.title}
+          className="project-card-image"
+        />
+      </div>
       <div className="project-card-body">
         <h3>{project.title}</h3>
         <p>{project.description}</p>
