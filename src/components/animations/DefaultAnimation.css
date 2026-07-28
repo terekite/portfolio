@@ -1,0 +1,49 @@
+.default-animation {
+  height: 100%;
+  overflow: hidden;
+  background: #05080c;
+  position: relative;
+}
+
+.code-scroll {
+  padding: 0 1rem;
+  animation: code-fall 7s linear infinite;
+  animation-play-state: paused;
+}
+
+.code-scroll pre {
+  margin: 0;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.78rem;
+  line-height: 1.75;
+  white-space: pre;
+  color: color-mix(in srgb, var(--accent) 60%, white);
+  opacity: 0.55;
+  text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+/* Every few lines: a hot line, full brightness + hard glow */
+.code-scroll pre.line-bright {
+  opacity: 1;
+  color: color-mix(in srgb, var(--accent) 25%, white);
+  text-shadow:
+    0 0 4px color-mix(in srgb, var(--accent) 90%, white),
+    0 0 14px var(--accent);
+}
+
+.default-animation::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5, 8, 12, 0.95), transparent 25%, transparent 75%, rgba(5, 8, 12, 0.95));
+  pointer-events: none;
+}
+
+.project-card:hover .code-scroll {
+  animation-play-state: running;
+}
+
+@keyframes code-fall {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}

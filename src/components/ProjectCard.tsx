@@ -1,4 +1,5 @@
 import type { Project } from "../projects";
+import DefaultAnimation from "./animations/DefaultAnimation";
 
 interface ProjectCardProps {
   project: Project;
@@ -15,11 +16,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       }
     >
       <div className="project-card-banner">
-        <img
-          src={project.image ?? "/project-card-default-image.webp"}
-          alt={project.title}
-          className="project-card-image"
-        />
+        {project.animation ?? <DefaultAnimation />}
       </div>
       <div className="project-card-body">
         <h3>{project.title}</h3>

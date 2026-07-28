@@ -71,32 +71,10 @@ section h2 {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.project-card:hover .project-card-image {
-  transform: scale(1.15);
-}
-
 /* Banner: uniform 16:9 slot, screenshot cropped to fill, slow-zooms on hover */
 .project-card-banner {
   aspect-ratio: 16 / 9;
   overflow: hidden;
-}
-
-.project-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 1.4s ease;
-}
-
-.project-card-default-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: color-mix(in srgb, var(--accent) 12%, white);
-  color: var(--accent);
-  font-size: 3rem;
-  font-weight: 600;
 }
 
 /* Text content below the banner */
